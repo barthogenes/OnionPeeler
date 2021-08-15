@@ -1,19 +1,15 @@
-import * as cheerio from 'cheerio';
+import { writeFileSync } from 'fs';
 import * as rp from 'request-promise';
-import { Ascii85Decoder } from './decoder';
+import { Ascii85Decoder } from './ascii85/decoder';
+import { extractPayload } from './util/htmlParser';
 
 const url = 'https://www.tomdalling.com/toms-data-onion/';
 
 rp(url)
   .then(function (html) {
-    //success!
-    const $ = cheerio.load(html);
-    const payload = $('body > pre')
-      .text()
-      .split('==[ Payload ]===============================================')[1]
-      .substr(0, 200);
-    const decodedPayload = new Ascii85Decoder().decode(payload);
-    console.log(decodedPayload);
+    const rawPayload = extractPayload(html)
+    const decodedPayload = new Ascii85Decoder().decode(rawPayload);
+    writeFileSync("decodedPayload.txt", decodedPayload);
   })
   .catch(function (err) {
     console.error(err);
