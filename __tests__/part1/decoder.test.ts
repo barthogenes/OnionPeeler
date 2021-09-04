@@ -1,24 +1,18 @@
 import { readFileSync } from 'fs';
-import { Ascii85Decoder } from '../src/ascii85/decoder';
+import { decodeAscii85 } from '../../src/part1/ascii85decoder';
 
 describe('decoder', () => {
   it('decodes <~9jqo^~> to Man', () => {
-    // Arrange
-    const decoder = new Ascii85Decoder();
-
-    // Act
-    const result = decoder.decode('<~9jqo^~>');
+    // Arrange, Act
+    const result = decodeAscii85('<~9jqo^~>');
 
     // Assert
     expect(result).toBe('Man ');
   });
 
   it('decodes example string', () => {
-    // Arrange
-    const decoder = new Ascii85Decoder();
-
-    // Act
-    const result = decoder.decode(
+    // Arrange, Act
+    const result = decodeAscii85(
       "<~9jqo^BlbD-BleB1DJ+*+F(f,q/0JhKF<GL>Cj@.4Gp$d7F!,L7@<6@)/0JDEF<G%<+EV:2F!,O<DJ+*.@<*K0@<6L(Df-\\0Ec5e;DffZ(EZee.Bl.9pF\"AGXBPCsi+DGm>@3BB/F*&OCAfu2/AKYi(DIb:@FD,*)+C]U=@3BN#EcYf8ATD3s@q?d$AftVqCh[NqF<G:8+EV:.+Cf>-FD5W8ARlolDIal(DId<j@<?3r@:F%a+D58'ATD4$Bl@l3De:,-DJs`8ARoFb/0JMK@qB4^F!,R<AKZ&-DfTqBG%G>uD.RTpAKYo'+CT/5+Cei#DII?(E,9)oF*2M7/c~>",
     );
 
@@ -30,12 +24,11 @@ describe('decoder', () => {
 
   it('decodes the payload', () => {
     // Arrange
-    const decoder = new Ascii85Decoder();
-    const rawPayload = readFileSync("__tests__/rawPayload.txt", 'utf8');
-    const decodedPayload = readFileSync("__tests__/decodedPayload.txt", 'utf8');
+    const rawPayload = readFileSync("__tests__/part1/rawPayload.txt", 'utf8');
+    const decodedPayload = readFileSync("__tests__/part1/decodedPayload.txt", 'utf8');
 
     // Act
-    const result = decoder.decode(rawPayload);
+    const result = decodeAscii85(rawPayload);
 
     // Assert
     expect(result).toBe(decodedPayload);

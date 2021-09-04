@@ -1,24 +1,18 @@
 import { readFileSync } from 'fs';
-import { Ascii85Encoder } from '../src/ascii85/encoder';
+import { encodeAscii85 } from '../../src/part1/ascii85encoder';
 
-describe('Ascii85Encoder', () => {
+describe('encodeAscii85', () => {
   it('encodes Man to <~9jqo^~>', () => {
-    // Arrange
-    const encoder = new Ascii85Encoder();
-
-    // Act
-    const result = encoder.encode('Man ');
+    // Arrange, Act
+    const result = encodeAscii85('Man ');
 
     // Assert
     expect(result).toBe('<~9jqo^~>');
   });
 
   it('encodes example string', () => {
-    // Arrange
-    const encoder = new Ascii85Encoder();
-
-    // Act
-    const result = encoder.encode(
+    // Arrange, Act
+    const result = encodeAscii85(
       'Man is distinguished, not only by his reason, but by this singular passion from other animals, which is a lust of the mind, that by a perseverance of delight in the continued and indefatigable generation of knowledge, exceeds the short vehemence of any carnal pleasure.',
     );
 
@@ -30,12 +24,11 @@ describe('Ascii85Encoder', () => {
 
   it('encodes the payload', () => {
     // Arrange
-    const encoder = new Ascii85Encoder();
-    const payload = readFileSync("__tests__/decodedPayload.txt", 'utf8');
-    const encodedPayload = readFileSync("__tests__/rawPayload.txt", 'utf8');
+    const payload = readFileSync("__tests__/part1/decodedPayload.txt", 'utf8');
+    const encodedPayload = readFileSync("__tests__/part1/rawPayload.txt", 'utf8');
 
     // Act
-    const result = encoder.encode(payload);
+    const result = encodeAscii85(payload);
 
     // Assert
     expect(result).toBe(encodedPayload);
