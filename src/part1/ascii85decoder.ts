@@ -1,6 +1,5 @@
 import { cutUpString, removeAdobeDelimiters, reverseString } from "../util/stringUtils";
 
-
 export const decodeAscii85 = (inputStr: string): string => {
   let paddingUsed = 0;
   let decodedStr = "";

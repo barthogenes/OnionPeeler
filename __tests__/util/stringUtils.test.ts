@@ -1,4 +1,4 @@
-import { applyAdobeDelimiters, cutUpString, removeAdobeDelimiters, reverseString } from '../src/util/stringUtils';
+import { applyAdobeDelimiters, cutUpString, removeAdobeDelimiters, reverseString } from '../../src/util/stringUtils';
 
 describe('stringUtils', () => {
 

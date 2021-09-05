@@ -24,8 +24,8 @@ describe('encodeAscii85', () => {
 
   it('encodes the payload', () => {
     // Arrange
-    const payload = readFileSync("__tests__/part1/decodedPayload.txt", 'utf8');
-    const encodedPayload = readFileSync("__tests__/part1/rawPayload.txt", 'utf8');
+    const payload = readFileSync("Layer1-Decoded.txt", 'ascii');
+    const encodedPayload = readFileSync("__tests__/part1/rawPayload.txt", 'ascii');
 
     // Act
     const result = encodeAscii85(payload);
