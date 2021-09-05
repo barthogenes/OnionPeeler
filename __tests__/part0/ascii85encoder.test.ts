@@ -1,5 +1,5 @@
 import { readFileSync } from 'fs';
-import { encodeAscii85 } from '../../src/part1/ascii85encoder';
+import { encodeAscii85 } from '../../src/part0/ascii85encoder';
 
 describe('encodeAscii85', () => {
   it('encodes Man to <~9jqo^~>', () => {
@@ -24,8 +24,8 @@ describe('encodeAscii85', () => {
 
   it('encodes the payload', () => {
     // Arrange
-    const payload = readFileSync("Layer1-Decoded.txt", 'ascii');
-    const encodedPayload = readFileSync("__tests__/part1/rawPayload.txt", 'ascii');
+    const payload = readFileSync("Layer0-Decoded.txt", 'ascii');
+    const encodedPayload = readFileSync("__tests__/part0/rawPayload.txt", 'ascii');
 
     // Act
     const result = encodeAscii85(payload);

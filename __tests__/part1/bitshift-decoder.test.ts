@@ -1,16 +1,16 @@
 import { readFileSync } from 'fs';
-import { bitshiftDecode, flipEverySecondBit, rotateRight } from '../../src/part2/bitshift-decoder';
+import { bitshiftDecode, flipEverySecondBit, rotateRight } from '../../src/part1/bitshift-decoder';
 
 describe('bitshiftDecode', () => {
   it('decodes the payload', () => {
     // Arrange
-    const rawPayload = readFileSync("__tests__/part2/rawPayload.txt", 'utf8');
+    const rawPayload = readFileSync("__tests__/part1/rawPayload.txt", 'utf8');
 
     // Act
     const result = bitshiftDecode(rawPayload);
 
     // Assert
-    expect(result).toBe(readFileSync("Layer2-Decoded.txt", 'ascii'));
+    expect(result).toBe(readFileSync("Layer1-Decoded.txt", 'ascii'));
   });
 });
 
