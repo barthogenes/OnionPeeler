@@ -11,24 +11,10 @@ export function reverseString(str: string): string {
 }
 
 /**
- * Cut a string up in multiple seperate substrings, each of size length
+ * Cut a string up in multiple seperate substrings, each of size {length}.
  */
 export function cutUpString(str: string, length: number): string[] {
   return str.match(new RegExp('(.|\n|\r){1,' + length + '}', 'g'));
-}
-
-/***
- * Strips the padding from the
- */
-export function stripPadding(encodedStr: string, inputStrLength: number): string {
-  if (inputStrLength === 4) return encodedStr;
-
-  const paddingRequired = 4 - (inputStrLength % 4);
-  if (paddingRequired) {
-    return encodedStr.slice(0, encodedStr.length - paddingRequired);
-  }
-
-  return encodedStr;
 }
 
 /**
