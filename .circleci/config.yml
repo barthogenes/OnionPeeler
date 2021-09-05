@@ -1,0 +1,13 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@4.1
+  codecov: codecov/codecov@3.0.0
+
+workflows:
+  sample:
+    jobs:
+      - node/test:
+          version: '15.1'
+      - codecov/upload:
+          file: ./coverage.out
