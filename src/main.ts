@@ -6,8 +6,9 @@ import { extractPayloadFromText, getAssignmentFromPageHtml } from './util/htmlPa
 
 const url = 'https://www.tomdalling.com/toms-data-onion/';
 
-rp(url)
-  .then(function (html) {
+const main = async () => {
+  try {
+    const html = await rp(url);
     // Layer 1
     const assignmentText = getAssignmentFromPageHtml(html);
     const payloadLayer1 = extractPayloadFromText(assignmentText)
@@ -17,10 +18,11 @@ rp(url)
     // Layer 2
     const payloadLayer2 = extractPayloadFromText(decodedLayer1);
     const ascii85DecodedLayer2 = decodeAscii85(payloadLayer2);
-    writeFileSync("ascii85decodedPayload.txt", ascii85DecodedLayer2);
     const decodedLayer2 = bitshiftDecode(ascii85DecodedLayer2);
     writeFileSync("Layer2-Decoded.txt", decodedLayer2);
-  })
-  .catch(function (err) {
+  } catch (err) {
     console.error(err);
-  });
+  }
+}
+
+main();

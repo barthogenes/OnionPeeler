@@ -21,6 +21,11 @@
     "removeComments": true,
     "strict": true
   },
-  "include": ["src/**/*", "__tests__/**/*"],
-  "typeAcquisition": { "enable": true }
+  "include": [
+    "src/**/*",
+    "__tests__/**/*"
+  ],
+  "typeAcquisition": {
+    "enable": true
+  }
 }
