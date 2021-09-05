@@ -1,0 +1,17 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@4.7.0
+  codecov: codecov/codecov@3.0.0
+jobs:
+  build:
+    docker:
+      - image: cimg/node:lts
+
+    steps:
+      - checkout
+      - node/install-packages
+      - run: npm run build
+      - run: npm run test
+      - codecov/upload:
+          file: ./coverage/lcov.info

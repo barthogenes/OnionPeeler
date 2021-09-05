@@ -1,7 +1,8 @@
 [![TypeScript version][ts-badge]][typescript-39]
 [![Node.js version][nodejs-badge]][nodejs]
 [![APLv2][license-badge]][license]
-[![Node.js CI](https://github.com/barthogenes/OnionPeeler/actions/workflows/nodejs.yml/badge.svg)](https://github.com/barthogenes/OnionPeeler/actions/workflows/nodejs.yml)
+[![CircleCI](https://circleci.com/gh/barthogenes/OnionPeeler/tree/master.svg?style=svg)](https://circleci.com/gh/barthogenes/OnionPeeler/tree/master)
+[![codecov](https://codecov.io/gh/barthogenes/OnionPeeler/branch/master/graph/badge.svg?token=4RP6MXG20B)](https://codecov.io/gh/barthogenes/OnionPeeler)
 
 # OnionPeeler
 
