@@ -1,7 +1,7 @@
 [![TypeScript version][ts-badge]][typescript-39]
 [![Node.js version][nodejs-badge]][nodejs]
 [![APLv2][license-badge]][license]
-[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fbarthogenes%2FOnionPeeler%2Fbadge%3Fref%3Dmaster&style=flat)](https://actions-badge.atrox.dev/barthogenes/OnionPeeler/goto?ref=master)
+[![Node.js CI](https://github.com/barthogenes/OnionPeeler/actions/workflows/nodejs.yml/badge.svg)](https://github.com/barthogenes/OnionPeeler/actions/workflows/nodejs.yml)
 
 # OnionPeeler
 
