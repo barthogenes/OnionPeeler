@@ -10,14 +10,14 @@ My personal attempt at solving [Tom's Data Onion](https://www.tomdalling.com/tom
 
 ## Decoded layers
 
-| **Layer nr** | **Link to decoded file (Spoiler warning)** |
-| ------------ | ------------------------------------------ |
-| 1            | [Click here](Layer0-Decoded.txt)           |
-| 2            | [Click here](Layer1-Decoded.txt)           |
-| 3            | [Click here](Layer2-Decoded.txt)           |
-| 4            | WIP 🚧                                      |
-| 5            | WIP 🚧                                      |
-| 6            | WIP 🚧                                      |
+| **Layer nr** | **Link to decoded file**                          |
+| ------------ | ------------------------------------------------- |
+| 1            | [Click here (Spoiler alert!)](Layer0-Decoded.txt) |
+| 2            | [Click here (Spoiler alert!)](Layer1-Decoded.txt) |
+| 3            | [Click here (Spoiler alert!)](Layer2-Decoded.txt) |
+| 4            | WIP 🚧                                             |
+| 5            | WIP 🚧                                             |
+| 6            | WIP 🚧                                             |
 
 This repository was created from the wonderful <https://github.com/jsynowiec/node-typescript-boilerplate> template.
 
