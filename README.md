@@ -1,13 +1,25 @@
+# OnionPeeler
+
 [![TypeScript version][ts-badge]][typescript-39]
 [![Node.js version][nodejs-badge]][nodejs]
 [![APLv2][license-badge]][license]
 [![CircleCI](https://circleci.com/gh/barthogenes/OnionPeeler/tree/master.svg?style=svg)](https://circleci.com/gh/barthogenes/OnionPeeler/tree/master)
 [![codecov](https://codecov.io/gh/barthogenes/OnionPeeler/branch/master/graph/badge.svg?token=4RP6MXG20B)](https://codecov.io/gh/barthogenes/OnionPeeler)
 
-# OnionPeeler
-
 My personal attempt at solving [Tom's Data Onion](https://www.tomdalling.com/toms-data-onion/) puzzle using NodeJS and TypeScript.
-This repository was created from the wonderful https://github.com/jsynowiec/node-typescript-boilerplate template.
+
+## Decoded layers
+
+| **Layer nr** | **Link to decoded file (Spoiler warning)** |
+| ------------ | ------------------------------------------ |
+| 1            | [Click here](Layer0-Decoded.txt)           |
+| 2            | [Click here](Layer1-Decoded.txt)           |
+| 3            | [Click here](Layer2-Decoded.txt)           |
+| 4            | WIP 🚧                                      |
+| 5            | WIP 🚧                                      |
+| 6            | WIP 🚧                                      |
+
+This repository was created from the wonderful <https://github.com/jsynowiec/node-typescript-boilerplate> template.
 
 🏃🏽 Tools used:
 
@@ -19,7 +31,7 @@ This repository was created from the wonderful https://github.com/jsynowiec/node
 - NPM [scripts](#available-scripts) for common operations
 - simple example of TypeScript code and unit test
 - .editorconfig for consistent file format
-- configuration for [GitHub Actions][gh-actions] and [Travis CI][travis]
+- configuration for [GitHub Actions][gh-actions]
 
 ## Getting Started
 
@@ -49,3 +61,4 @@ Licensed under the APLv2. See the [LICENSE](https://github.com/barthogenes/Onion
 [jest]: https://facebook.github.io/jest/
 [eslint]: https://github.com/eslint/eslint
 [gh-actions]: https://github.com/features/actions
+[prettier]: https://prettier.io
