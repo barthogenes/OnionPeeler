@@ -15,7 +15,7 @@ My personal attempt at solving [Tom's Data Onion](https://www.tomdalling.com/tom
 | 1            | [Click here (Spoiler alert!)](Layer0-Decoded.txt) |
 | 2            | [Click here (Spoiler alert!)](Layer1-Decoded.txt) |
 | 3            | [Click here (Spoiler alert!)](Layer2-Decoded.txt) |
-| 4            | WIP 🚧                                             |
+| 4            | [Click here (Spoiler alert!)](Layer3-Decoded.txt) |
 | 5            | WIP 🚧                                             |
 | 6            | WIP 🚧                                             |
 

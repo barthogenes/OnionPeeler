@@ -3,6 +3,7 @@ import * as rp from 'request-promise';
 import { decodeAscii85 } from './part0/ascii85decoder';
 import { bitshiftDecode } from './part1/bitshift-decoder';
 import { paritybitDecode } from './part2/paritybit-decoder';
+import { SECRET_KEY, xOrDecode } from './part3/xor-decoder';
 import { extractPayloadFromText, getAssignmentFromPageHtml } from './util/htmlParser';
 
 const url = 'https://www.tomdalling.com/toms-data-onion/';
@@ -27,6 +28,12 @@ const main = async () => {
     const ascii85DecodedLayer2 = decodeAscii85(payloadLayer2);
     const decodedLayer2 = paritybitDecode(ascii85DecodedLayer2);
     writeFileSync("Layer2-Decoded.txt", decodedLayer2);
+
+    // Layer 3
+    const payloadLayer3 = extractPayloadFromText(decodedLayer2);
+    const ascii85DecodedLayer3 = decodeAscii85(payloadLayer3);
+    const decodedLayer3 = xOrDecode(ascii85DecodedLayer3, SECRET_KEY);
+    writeFileSync("Layer3-Decoded.txt", decodedLayer3);
   } catch (err) {
     console.error(err);
   }
