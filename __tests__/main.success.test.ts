@@ -3,9 +3,6 @@ import { readFileSync } from 'fs';
 describe('main', () => {
   it('decodes layers', () => {
     // Arrange
-    const layer1Decoded = readFileSync("Layer0-Decoded.txt", 'ascii');
-    const layer2Decoded = readFileSync("Layer1-Decoded.txt", 'ascii');
-    const layer3Decoded = readFileSync("Layer2-Decoded.txt", 'ascii');
     jest.mock('request-promise', () => (
       () => Promise.resolve(readFileSync("__tests__/util/html.txt", 'utf8'))
     ));
@@ -13,6 +10,9 @@ describe('main', () => {
     jest.mock('fs', () => ({
       writeFileSync: mockWriteFileSync
     }));
+    const layer1Decoded = readFileSync("Layer0-Decoded.txt", 'ascii');
+    const layer2Decoded = readFileSync("Layer1-Decoded.txt", 'ascii');
+    const layer3Decoded = readFileSync("Layer2-Decoded.txt", 'ascii');
 
     // Act
     return import('../src/main').then(() => {
