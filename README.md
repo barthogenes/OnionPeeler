@@ -32,6 +32,7 @@ This repository was created from the wonderful <https://github.com/jsynowiec/nod
 - simple example of TypeScript code and unit test
 - .editorconfig for consistent file format
 - configuration for [GitHub Actions][gh-actions]
+- [asdf-vm](https://asdf-vm.com/) for managing nodejs versions in Linux (uses [.tool-versions](./.tool-versions) file)
 
 ## Getting Started
 
