@@ -1,6 +1,6 @@
 # OnionPeeler
 
-[![TypeScript version][ts-badge]][typescript-39]
+[![TypeScript version][ts-badge]][typescript-49]
 [![Node.js version][nodejs-badge]][nodejs]
 [![APLv2][license-badge]][license]
 [![CircleCI](https://circleci.com/gh/barthogenes/OnionPeeler/tree/master.svg?style=svg)](https://circleci.com/gh/barthogenes/OnionPeeler/tree/master)
