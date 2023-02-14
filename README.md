@@ -6,7 +6,7 @@
 [![CircleCI](https://circleci.com/gh/barthogenes/OnionPeeler/tree/master.svg?style=svg)](https://circleci.com/gh/barthogenes/OnionPeeler/tree/master)
 [![codecov](https://codecov.io/gh/barthogenes/OnionPeeler/branch/master/graph/badge.svg?token=4RP6MXG20B)](https://codecov.io/gh/barthogenes/OnionPeeler)
 
-My personal attempt at solving [Tom's Data Onion](https://www.tomdalling.com/toms-data-onion/) puzzle using NodeJS and TypeScript.
+My attempt at solving [Tom's Data Onion](https://www.tomdalling.com/toms-data-onion/) puzzle using NodeJS and TypeScript.
 
 ## Decoded layers
 
