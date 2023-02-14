@@ -23,7 +23,7 @@ This repository was created from the wonderful <https://github.com/jsynowiec/nod
 
 🏃🏽 Tools used:
 
-- [TypeScript][typescript] [3.9][typescript-39]
+- [TypeScript][typescript] [4.9][typescript-49]
 - [ESLint][eslint] with some initial rules recommendation
 - [Jest][jest] for fast unit testing and code coverage
 - Type definitions for Node.js and Jest
@@ -52,11 +52,11 @@ This project is intended to be used with the latest Active LTS release of [Node.
 
 Licensed under the APLv2. See the [LICENSE](https://github.com/barthogenes/OnionPeeler/blob/master/LICENSE) file for details.
 
-[ts-badge]: https://img.shields.io/badge/TypeScript-3.9-blue.svg
-[nodejs-badge]: https://img.shields.io/badge/Node.js->=%2012.13-blue.svg
-[nodejs]: https://nodejs.org/dist/latest-v12.x/docs/api/
+[ts-badge]: https://img.shields.io/badge/TypeScript-4.9.5-blue.svg
+[nodejs-badge]: https://img.shields.io/badge/Node.js-%3E=%2019-blue.svg
+[nodejs]: https://nodejs.org/dist/latest-v19.x/docs/api/
 [typescript]: https://www.typescriptlang.org/
-[typescript-39]: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-9.html
+[typescript-49]: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html
 [license-badge]: https://img.shields.io/badge/license-APLv2-blue.svg
 [license]: https://github.com/barthogenes/OnionPeeler/blob/master/LICENSE
 [jest]: https://facebook.github.io/jest/
