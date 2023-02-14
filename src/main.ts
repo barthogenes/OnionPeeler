@@ -5,7 +5,6 @@ import { bitshiftDecode } from './part1/bitshift-decoder';
 import { paritybitDecode } from './part2/paritybit-decoder';
 import { SECRET_KEY, xOrDecode } from './part3/xor-decoder';
 import { extractPayloadFromText, getAssignmentFromPageHtml } from './util/htmlParser';
-import { ipPacketDecode } from './part4/ip-decoder';
 
 const url = 'https://www.tomdalling.com/toms-data-onion/';
 
@@ -43,8 +42,7 @@ const main = async () => {
     // Start layer 4
     const payloadLayer4 = extractPayloadFromText(decodedLayer3);
     const ascii85DecodedLayer4 = decodeAscii85(payloadLayer4);
-    const decodedLayer4 = ipPacketDecode(ascii85DecodedLayer4);
-    writeFileSync("Layer4-Decoded.txt", decodedLayer4);
+    writeFileSync("Layer4-Decoded.txt", ascii85DecodedLayer4);
     // End layer 4
   } catch (err) {
     console.error(err);
